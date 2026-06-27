@@ -16,12 +16,14 @@ java {
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     implementation 'org.springframework.boot:spring-boot-starter-webmvc'
-    implementation 'org.example:UberProject-EntityService:0.0.3-SNAPSHOT'
+    // Source: https://mvnrepository.com/artifact/redis.clients/jedis
+    implementation 'redis.clients:jedis:7.5.2'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
